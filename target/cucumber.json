@@ -1,23 +1,23 @@
 [
   {
-    "line": 2,
+    "line": 1,
     "elements": [
       {
-        "start_timestamp": "2019-12-24T18:45:36.725Z",
-        "line": 16,
-        "name": "User should not be able to login with blank credential",
+        "start_timestamp": "2019-12-24T21:17:37.301Z",
+        "line": 12,
+        "name": "Account summary page account types",
         "description": "",
-        "id": "login;user-should-not-be-able-to-login-with-blank-credential",
+        "id": "account-summary;account-summary-page-account-types",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 1989018899,
+              "duration": 1772727656,
               "status": "passed"
             },
-            "line": 17,
-            "name": "user is already on login page",
+            "line": 13,
+            "name": "user is already on home page",
             "match": {
               "location": "LoginPageStepDefinitions.user_is_already_on_login_page()"
             },
@@ -25,20 +25,20 @@
           },
           {
             "result": {
-              "duration": 187822578,
+              "duration": 565813081,
               "status": "passed"
             },
-            "line": 18,
-            "name": "user enters \"\" and \"\" and clicks Sign in button",
+            "line": 14,
+            "name": "user enters \"username\" and \"password\" and clicks Sign in button",
             "match": {
               "arguments": [
                 {
-                  "val": "\"\"",
+                  "val": "\"username\"",
                   "offset": 12
                 },
                 {
-                  "val": "\"\"",
-                  "offset": 19
+                  "val": "\"password\"",
+                  "offset": 27
                 }
               ],
               "location": "LoginPageStepDefinitions.user_enters_and_and_clicks_Sign_in_button(String,String)"
@@ -47,53 +47,51 @@
           },
           {
             "result": {
-              "duration": 31625431,
+              "duration": 74029191,
               "status": "passed"
             },
-            "line": 19,
-            "name": "user should not be able to login",
+            "line": 15,
+            "name": "following account types should be displayed",
             "match": {
-              "location": "LoginPageStepDefinitions.user_should_not_be_able_to_login()"
+              "location": "AccountSummaryPageStepDefinitions.following_account_types_should_be_displayed(String\u003e)"
             },
+            "rows": [
+              {
+                "cells": [
+                  "Cash Accounts",
+                  "Investment Accounts",
+                  "Credit Accounts",
+                  "Loan Accounts"
+                ]
+              }
+            ],
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 26112200,
+              "duration": 72542817,
               "status": "passed"
             },
-            "line": 20,
-            "name": "error message should be displayed",
+            "line": 17,
+            "name": "close browser",
             "match": {
-              "location": "LoginPageStepDefinitions.error_message_should_be_displayed()"
+              "location": "LoginPageStepDefinitions.closeBrowser()"
             },
             "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@login"
-          },
-          {
-            "name": "@wip"
+            "name": "@accountSummary2"
           }
         ]
       }
     ],
-    "name": "Login",
+    "name": "Account Summary",
     "description": "",
-    "id": "login",
+    "id": "account-summary",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/Login.feature",
-    "tags": [
-      {
-        "name": "@login",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 1
-        }
-      }
-    ]
+    "uri": "file:src/test/resources/features/AccountSummary.feature",
+    "tags": []
   }
 ]

@@ -1,29 +1,21 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/AccountSummary.feature");
 formatter.feature({
-  "name": "Login",
+  "name": "Account Summary",
   "description": "",
-  "keyword": "Feature",
-  "tags": [
-    {
-      "name": "@login"
-    }
-  ]
+  "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "User should not be able to login with blank credential",
+  "name": "Account summary page account types",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@login"
-    },
-    {
-      "name": "@wip"
+      "name": "@accountSummary2"
     }
   ]
 });
 formatter.step({
-  "name": "user is already on login page",
+  "name": "user is already on home page",
   "keyword": "Given "
 });
 formatter.match({
@@ -33,7 +25,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enters \"\" and \"\" and clicks Sign in button",
+  "name": "user enters \"username\" and \"password\" and clicks Sign in button",
   "keyword": "When "
 });
 formatter.match({
@@ -43,21 +35,31 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user should not be able to login",
+  "name": "following account types should be displayed",
+  "rows": [
+    {
+      "cells": [
+        "Cash Accounts",
+        "Investment Accounts",
+        "Credit Accounts",
+        "Loan Accounts"
+      ]
+    }
+  ],
   "keyword": "Then "
 });
 formatter.match({
-  "location": "LoginPageStepDefinitions.user_should_not_be_able_to_login()"
+  "location": "AccountSummaryPageStepDefinitions.following_account_types_should_be_displayed(String\u003e)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "error message should be displayed",
+  "name": "close browser",
   "keyword": "And "
 });
 formatter.match({
-  "location": "LoginPageStepDefinitions.error_message_should_be_displayed()"
+  "location": "LoginPageStepDefinitions.closeBrowser()"
 });
 formatter.result({
   "status": "passed"

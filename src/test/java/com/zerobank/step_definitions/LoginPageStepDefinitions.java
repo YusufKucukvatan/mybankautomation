@@ -1,6 +1,8 @@
 package com.zerobank.step_definitions;
 
 import com.zerobank.pages.LoginPage;
+import com.zerobank.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -9,14 +11,14 @@ import org.junit.Assert;
 public class LoginPageStepDefinitions {
     LoginPage loginPage=new LoginPage();
 
-    @Given("user is already on login page")
+    @Given("user is already on home page")
     public void user_is_already_on_login_page() {
-        loginPage.signin();
+        loginPage.openUrl();
     }
 
     @When("user enters {string} and {string} and clicks Sign in button")
-    public void user_enters_and_and_clicks_Sign_in_button(String string, String string2) {
-        loginPage.login(string,string2);
+    public void user_enters_and_and_clicks_Sign_in_button(String string1, String string2) {
+        loginPage.login(string1,string2);
     }
 
     @Then("user should be on Account Summary page")
@@ -33,5 +35,10 @@ public class LoginPageStepDefinitions {
     public void error_message_should_be_displayed() {
         Assert.assertTrue(loginPage.verifyErrorMessageDisplayed());
 
+    }
+
+    @And("close browser")
+    public void closeBrowser() {
+        Driver.get().close();
     }
 }

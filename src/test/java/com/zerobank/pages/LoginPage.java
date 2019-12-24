@@ -34,18 +34,16 @@ public class LoginPage extends PageBase{
     @FindBy(css = ".alert.alert-error")
     public WebElement errorMessage;
 
-    public void signin(){
+    public void openUrl(){
         Driver.get().get(ConfigurationReader.get("url"));
         Driver.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        BrowserUtils.waitForClickablility(signinButton,5);
-        signinButton.click();
     }
 
     public void login(String username, String password) {
+        signinButton.click();
         this.username.sendKeys(username);
         this.password.sendKeys(password);
         submitButton.click();
-        BrowserUtils.waitForPageToLoad(2);
     }
 
     public boolean verifyAccountSummary(){
