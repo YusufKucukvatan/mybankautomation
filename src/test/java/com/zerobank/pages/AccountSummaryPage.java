@@ -18,6 +18,9 @@ public class AccountSummaryPage extends PageBase{
     @FindBy(xpath = "//h2[@class='board-header']")
     public List<WebElement> subTitles;
 
+    @FindBy(xpath = "//h2[text()='Credit Accounts']/following-sibling::div[@class='board'][1]/div/table/thead/tr/th")
+    public List<WebElement> table;
+
     public String returnTitle(){
         String actualTitle=Driver.get().getTitle();
         return actualTitle;
@@ -30,5 +33,13 @@ public class AccountSummaryPage extends PageBase{
             dashboardTitles.add(e.getText());
         }
         return dashboardTitles;
+    }
+
+    public List<String> returnColumns() {
+        List<String> tableTitles = new ArrayList<>();
+        for (WebElement e : table) {
+            tableTitles.add(e.getText());
+        }
+        return tableTitles;
     }
 }

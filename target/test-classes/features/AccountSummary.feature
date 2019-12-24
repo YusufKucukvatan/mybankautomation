@@ -15,3 +15,11 @@ Feature: Account Summary
     Then following account types should be displayed
       | Cash Accounts | Investment Accounts | Credit Accounts | Loan Accounts |
     And close browser
+
+  @accountSummary3
+  Scenario: Account summary page account types
+    Given user is already on home page
+    When user enters "username" and "password" and clicks Sign in button
+    Then following columns should be displayed on Credit Accounts table
+      | Account | Credit Card | Balance |
+    And close browser

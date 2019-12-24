@@ -10,7 +10,7 @@ formatter.scenario({
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@accountSummary2"
+      "name": "@accountSummary3"
     }
   ]
 });
@@ -35,21 +35,20 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "following account types should be displayed",
+  "name": "following columns should be displayed on Credit Accounts table",
   "rows": [
     {
       "cells": [
-        "Cash Accounts",
-        "Investment Accounts",
-        "Credit Accounts",
-        "Loan Accounts"
+        "Account",
+        "Credit Card",
+        "Balance"
       ]
     }
   ],
   "keyword": "Then "
 });
 formatter.match({
-  "location": "AccountSummaryPageStepDefinitions.following_account_types_should_be_displayed(String\u003e)"
+  "location": "AccountSummaryPageStepDefinitions.followingColumnsShouldBeDisplayedOnCreditAccountsTable(String\u003e)"
 });
 formatter.result({
   "status": "passed"

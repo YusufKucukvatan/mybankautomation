@@ -24,6 +24,14 @@ public class AccountSummaryPageStepDefinitions {
         List<String> actualSubTitles=accountSummaryPage.returnSubTitles();
         System.out.println(actualSubTitles);
         System.out.println(expectedSubTitles);
-        Assert.assertEquals(expectedSubTitles,actualSubTitles);
+        Assert.assertEquals("Subtitles not matched",expectedSubTitles,actualSubTitles);
+    }
+
+    @Then("following columns should be displayed on Credit Accounts table")
+    public void followingColumnsShouldBeDisplayedOnCreditAccountsTable(List<String> expectedColumns) {
+        List<String> actualColumns=accountSummaryPage.returnColumns();
+        System.out.println(actualColumns);
+        System.out.println(expectedColumns);
+        Assert.assertEquals("Columns not matched",expectedColumns,actualColumns);
     }
 }
