@@ -1,16 +1,16 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/AccountSummary.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/AccountActivity.feature");
 formatter.feature({
-  "name": "Account Summary",
+  "name": "Account Activity",
   "description": "",
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "Account summary page account types",
+  "name": "Account Activity transaction table columns verification",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@accountSummary3"
+      "name": "@accountActivity4"
     }
   ]
 });
@@ -35,20 +35,31 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "following columns should be displayed on Credit Accounts table",
+  "name": "user clicks on \"Account Activity\" tab",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "LoginPageStepDefinitions.userClicksOnTab(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "transaction table columns should be following items",
   "rows": [
     {
       "cells": [
-        "Account",
-        "Credit Card",
-        "Balance"
+        "Date",
+        "Description",
+        "Deposit",
+        "Withdrawal"
       ]
     }
   ],
   "keyword": "Then "
 });
 formatter.match({
-  "location": "AccountSummaryPageStepDefinitions.followingColumnsShouldBeDisplayedOnCreditAccountsTable(String\u003e)"
+  "location": "AccountActivityPageStepDefinitions.transactionTableColumnsShouldBeFollowingItems(String\u003e)"
 });
 formatter.result({
   "status": "passed"

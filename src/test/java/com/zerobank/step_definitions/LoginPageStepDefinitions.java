@@ -17,8 +17,8 @@ public class LoginPageStepDefinitions {
     }
 
     @When("user enters {string} and {string} and clicks Sign in button")
-    public void user_enters_and_and_clicks_Sign_in_button(String string1, String string2) {
-        loginPage.login(string1,string2);
+    public void user_enters_and_and_clicks_Sign_in_button(String username, String password) {
+        loginPage.login(username,password);
     }
 
     @Then("user should be on Account Summary page")
@@ -40,5 +40,11 @@ public class LoginPageStepDefinitions {
     @And("close browser")
     public void closeBrowser() {
         Driver.get().close();
+    }
+
+
+    @And("user clicks on {string} tab")
+    public void userClicksOnTab(String tab) {
+        loginPage.navigateTo(tab);
     }
 }
