@@ -23,24 +23,30 @@ formatter.step({
   "name": "user is already on login page",
   "keyword": "Given "
 });
-formatter.match({});
+formatter.match({
+  "location": "LoginPageStepDefinitions.user_is_already_on_login_page()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
   "name": "user enters valid credentials and click Sign in button",
   "keyword": "When "
 });
-formatter.match({});
+formatter.match({
+  "location": "LoginPageStepDefinitions.user_enters_valid_credentials_and_click_Sign_in_button()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
   "name": "user should be on Account Summary page",
   "keyword": "Then "
 });
-formatter.match({});
+formatter.match({
+  "location": "LoginPageStepDefinitions.user_should_be_on_Account_Summary_page()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 });

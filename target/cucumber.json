@@ -3,7 +3,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2019-12-24T16:34:41.305Z",
+        "start_timestamp": "2019-12-24T17:18:10.894Z",
         "line": 4,
         "name": "Only authorized users should be able to login",
         "description": "",
@@ -13,29 +13,38 @@
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 2331554126,
+              "status": "passed"
             },
             "line": 5,
             "name": "user is already on login page",
-            "match": {},
+            "match": {
+              "location": "LoginPageStepDefinitions.user_is_already_on_login_page()"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 389571734,
+              "status": "passed"
             },
             "line": 6,
             "name": "user enters valid credentials and click Sign in button",
-            "match": {},
+            "match": {
+              "location": "LoginPageStepDefinitions.user_enters_valid_credentials_and_click_Sign_in_button()"
+            },
             "keyword": "When "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 6179535,
+              "status": "passed"
             },
             "line": 7,
             "name": "user should be on Account Summary page",
-            "match": {},
+            "match": {
+              "location": "LoginPageStepDefinitions.user_should_be_on_Account_Summary_page()"
+            },
             "keyword": "Then "
           }
         ],
