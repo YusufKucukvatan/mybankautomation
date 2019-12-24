@@ -10,11 +10,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.concurrent.TimeUnit;
 
-public class LoginPage {
+public class LoginPage extends PageBase{
 
     public LoginPage(){
         PageFactory.initElements(Driver.get(),this);
     }
+
     @FindBy(id="signin_button")
     public WebElement signinButton;
 
@@ -27,15 +28,22 @@ public class LoginPage {
     @FindBy(css = "input[name=\"submit\"]")
     public WebElement submitButton;
 
+    @FindBy(xpath = "//h3[contains(text(),\"Troubles\")]")
+    public WebElement troubleMessage;
+
+    @FindBy(css = ".alert.alert-error")
+    public WebElement errorMessage;
+
     public void signin(){
         Driver.get().get(ConfigurationReader.get("url"));
         Driver.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        BrowserUtils.waitForClickablility(signinButton,5);
         signinButton.click();
     }
 
-    public void login() {
-        this.username.sendKeys(ConfigurationReader.get("username"));
-        this.password.sendKeys(ConfigurationReader.get("password"));
+    public void login(String username, String password) {
+        this.username.sendKeys(username);
+        this.password.sendKeys(password);
         submitButton.click();
         BrowserUtils.waitForPageToLoad(2);
     }
@@ -46,4 +54,11 @@ public class LoginPage {
         boolean verification=expectedTitle.equals(actualTitle);
         return verification;
     }
+    public boolean verifyTroubleMessageDisplayed(){
+        return troubleMessage.isDisplayed();
+    }
+    public boolean verifyErrorMessageDisplayed(){
+        return errorMessage.isDisplayed();
+    }
+
 }

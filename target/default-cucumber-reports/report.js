@@ -10,12 +10,15 @@ formatter.feature({
   ]
 });
 formatter.scenario({
-  "name": "Only authorized users should be able to login",
+  "name": "User should not be able to login with blank credential",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
       "name": "@login"
+    },
+    {
+      "name": "@wip"
     }
   ]
 });
@@ -30,21 +33,31 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enters valid credentials and click Sign in button",
+  "name": "user enters \"\" and \"\" and clicks Sign in button",
   "keyword": "When "
 });
 formatter.match({
-  "location": "LoginPageStepDefinitions.user_enters_valid_credentials_and_click_Sign_in_button()"
+  "location": "LoginPageStepDefinitions.user_enters_and_and_clicks_Sign_in_button(String,String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user should be on Account Summary page",
+  "name": "user should not be able to login",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "LoginPageStepDefinitions.user_should_be_on_Account_Summary_page()"
+  "location": "LoginPageStepDefinitions.user_should_not_be_able_to_login()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "error message should be displayed",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "LoginPageStepDefinitions.error_message_should_be_displayed()"
 });
 formatter.result({
   "status": "passed"

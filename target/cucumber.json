@@ -3,20 +3,20 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2019-12-24T17:18:10.894Z",
-        "line": 4,
-        "name": "Only authorized users should be able to login",
+        "start_timestamp": "2019-12-24T18:45:36.725Z",
+        "line": 16,
+        "name": "User should not be able to login with blank credential",
         "description": "",
-        "id": "login;only-authorized-users-should-be-able-to-login",
+        "id": "login;user-should-not-be-able-to-login-with-blank-credential",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 2331554126,
+              "duration": 1989018899,
               "status": "passed"
             },
-            "line": 5,
+            "line": 17,
             "name": "user is already on login page",
             "match": {
               "location": "LoginPageStepDefinitions.user_is_already_on_login_page()"
@@ -25,32 +25,57 @@
           },
           {
             "result": {
-              "duration": 389571734,
+              "duration": 187822578,
               "status": "passed"
             },
-            "line": 6,
-            "name": "user enters valid credentials and click Sign in button",
+            "line": 18,
+            "name": "user enters \"\" and \"\" and clicks Sign in button",
             "match": {
-              "location": "LoginPageStepDefinitions.user_enters_valid_credentials_and_click_Sign_in_button()"
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 12
+                },
+                {
+                  "val": "\"\"",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginPageStepDefinitions.user_enters_and_and_clicks_Sign_in_button(String,String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 6179535,
+              "duration": 31625431,
               "status": "passed"
             },
-            "line": 7,
-            "name": "user should be on Account Summary page",
+            "line": 19,
+            "name": "user should not be able to login",
             "match": {
-              "location": "LoginPageStepDefinitions.user_should_be_on_Account_Summary_page()"
+              "location": "LoginPageStepDefinitions.user_should_not_be_able_to_login()"
             },
             "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 26112200,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "error message should be displayed",
+            "match": {
+              "location": "LoginPageStepDefinitions.error_message_should_be_displayed()"
+            },
+            "keyword": "And "
           }
         ],
         "tags": [
           {
             "name": "@login"
+          },
+          {
+            "name": "@wip"
           }
         ]
       }

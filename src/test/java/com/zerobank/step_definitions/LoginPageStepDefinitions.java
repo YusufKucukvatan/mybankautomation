@@ -14,9 +14,9 @@ public class LoginPageStepDefinitions {
         loginPage.signin();
     }
 
-    @When("user enters valid credentials and click Sign in button")
-    public void user_enters_valid_credentials_and_click_Sign_in_button() {
-        loginPage.login();
+    @When("user enters {string} and {string} and clicks Sign in button")
+    public void user_enters_and_and_clicks_Sign_in_button(String string, String string2) {
+        loginPage.login(string,string2);
     }
 
     @Then("user should be on Account Summary page")
@@ -24,4 +24,14 @@ public class LoginPageStepDefinitions {
         Assert.assertTrue("Title not matched", loginPage.verifyAccountSummary());
     }
 
+    @Then("user should not be able to login")
+    public void user_should_not_be_able_to_login() {
+        Assert.assertTrue(loginPage.verifyTroubleMessageDisplayed());
+    }
+
+    @Then("error message should be displayed")
+    public void error_message_should_be_displayed() {
+        Assert.assertTrue(loginPage.verifyErrorMessageDisplayed());
+
+    }
 }
