@@ -1,73 +1,79 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/AddNewPayee.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/FindTransactions.feature");
 formatter.feature({
-  "name": "Add new payee under pay bills",
+  "name": "Find Transactions in Account Activity",
   "description": "",
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "Add a new payee",
+  "name": "Search date range",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@addNewPayee"
+      "name": "@findTransactions"
     }
   ]
 });
 formatter.step({
-  "name": "user is already on Add New Payee page",
+  "name": "user is already on Find Transactions tab",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "AddNewPayeePageStepDefinitions.userIsAlreadyOnAddNewPayeePage()"
+  "location": "FindTransactionsPageStepDefinitions.user_is_already_on_Find_Transactions_tab()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user creates new payee using following information",
-  "rows": [
-    {
-      "cells": [
-        "Payee Name",
-        "The Law Offices of Hyde, Price \u0026 Scharks"
-      ]
-    },
-    {
-      "cells": [
-        "Payee Address",
-        "100 Same st, Anytown, USA, 10001"
-      ]
-    },
-    {
-      "cells": [
-        "Account",
-        "Checking"
-      ]
-    },
-    {
-      "cells": [
-        "Payee details",
-        "XYZ account"
-      ]
-    }
-  ],
+  "name": "user enters date range from \"2012-09-01\" to \"2012-09-06\" and clicks find button",
   "keyword": "When "
 });
 formatter.match({
-  "location": "AddNewPayeePageStepDefinitions.user_creates_new_payee_using_following_information(String,String\u003e)"
+  "location": "FindTransactionsPageStepDefinitions.user_enters_date_range_from_to_and_clicks_find_button(String,String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "message \"The new payee The Law Offices of Hyde, Price \u0026 Scharks was successfully created.\" should be displayed",
+  "name": "results table should only show transactions between “2012-09-01” and \"2012-09-06\"",
   "keyword": "Then "
 });
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "results should be sorted by most recent date",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "user enters date range from \"2012-09-02\" to \"2012-09-06\" and clicks find button",
+  "keyword": "When "
+});
 formatter.match({
-  "location": "AddNewPayeePageStepDefinitions.message_should_be_displayed(String)"
+  "location": "FindTransactionsPageStepDefinitions.user_enters_date_range_from_to_and_clicks_find_button(String,String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
+});
+formatter.step({
+  "name": "results table should only show transactions between \"2012-09-02\" and \"2012-09-06\"",
+  "keyword": "Then "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "results table should not contain transactions dated \"2012-09-01\"",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
 });
 });
