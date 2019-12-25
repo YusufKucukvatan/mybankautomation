@@ -1,115 +1,97 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "start_timestamp": "2019-12-24T23:42:08.473Z",
-        "line": 29,
-        "name": "Account Activity transaction table columns verification",
+        "start_timestamp": "2019-12-25T01:38:13.708Z",
+        "line": 4,
+        "name": "Add a new payee",
         "description": "",
-        "id": "account-activity;account-activity-transaction-table-columns-verification",
+        "id": "add-new-payee-under-pay-bills;add-a-new-payee",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 1794567082,
+              "duration": 2575809038,
               "status": "passed"
             },
-            "line": 30,
-            "name": "user is already on home page",
+            "line": 5,
+            "name": "user is already on Add New Payee page",
             "match": {
-              "location": "LoginPageStepDefinitions.user_is_already_on_login_page()"
+              "location": "AddNewPayeePageStepDefinitions.userIsAlreadyOnAddNewPayeePage()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 583973374,
+              "duration": 1330552999,
               "status": "passed"
             },
-            "line": 31,
-            "name": "user enters \"username\" and \"password\" and clicks Sign in button",
+            "line": 6,
+            "name": "user creates new payee using following information",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"username\"",
-                  "offset": 12
-                },
-                {
-                  "val": "\"password\"",
-                  "offset": 27
-                }
-              ],
-              "location": "LoginPageStepDefinitions.user_enters_and_and_clicks_Sign_in_button(String,String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 164547019,
-              "status": "passed"
-            },
-            "line": 32,
-            "name": "user clicks on \"Account Activity\" tab",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Account Activity\"",
-                  "offset": 15
-                }
-              ],
-              "location": "LoginPageStepDefinitions.userClicksOnTab(String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 69279776,
-              "status": "passed"
-            },
-            "line": 33,
-            "name": "transaction table columns should be following items",
-            "match": {
-              "location": "AccountActivityPageStepDefinitions.transactionTableColumnsShouldBeFollowingItems(String\u003e)"
+              "location": "AddNewPayeePageStepDefinitions.user_creates_new_payee_using_following_information(String,String\u003e)"
             },
             "rows": [
               {
                 "cells": [
-                  "Date",
-                  "Description",
-                  "Deposit",
-                  "Withdrawal"
+                  "Payee Name",
+                  "The Law Offices of Hyde, Price \u0026 Scharks"
+                ]
+              },
+              {
+                "cells": [
+                  "Payee Address",
+                  "100 Same st, Anytown, USA, 10001"
+                ]
+              },
+              {
+                "cells": [
+                  "Account",
+                  "Checking"
+                ]
+              },
+              {
+                "cells": [
+                  "Payee details",
+                  "XYZ account"
                 ]
               }
             ],
-            "keyword": "Then "
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 108268501,
+              "duration": 64742401,
               "status": "passed"
             },
-            "line": 35,
-            "name": "close browser",
+            "line": 11,
+            "name": "message \"The new payee The Law Offices of Hyde, Price \u0026 Scharks was successfully created.\" should be displayed",
             "match": {
-              "location": "LoginPageStepDefinitions.closeBrowser()"
+              "arguments": [
+                {
+                  "val": "\"The new payee The Law Offices of Hyde, Price \u0026 Scharks was successfully created.\"",
+                  "offset": 8
+                }
+              ],
+              "location": "AddNewPayeePageStepDefinitions.message_should_be_displayed(String)"
             },
-            "keyword": "And "
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@accountActivity4"
+            "name": "@addNewPayee"
           }
         ]
       }
     ],
-    "name": "Account Activity",
+    "name": "Add new payee under pay bills",
     "description": "",
-    "id": "account-activity",
+    "id": "add-new-payee-under-pay-bills",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/AccountActivity.feature",
+    "uri": "file:src/test/resources/features/AddNewPayee.feature",
     "tags": []
   }
 ]

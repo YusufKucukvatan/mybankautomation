@@ -1,75 +1,71 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/AccountActivity.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/AddNewPayee.feature");
 formatter.feature({
-  "name": "Account Activity",
+  "name": "Add new payee under pay bills",
   "description": "",
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "Account Activity transaction table columns verification",
+  "name": "Add a new payee",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@accountActivity4"
+      "name": "@addNewPayee"
     }
   ]
 });
 formatter.step({
-  "name": "user is already on home page",
+  "name": "user is already on Add New Payee page",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "LoginPageStepDefinitions.user_is_already_on_login_page()"
+  "location": "AddNewPayeePageStepDefinitions.userIsAlreadyOnAddNewPayeePage()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enters \"username\" and \"password\" and clicks Sign in button",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "LoginPageStepDefinitions.user_enters_and_and_clicks_Sign_in_button(String,String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on \"Account Activity\" tab",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "LoginPageStepDefinitions.userClicksOnTab(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "transaction table columns should be following items",
+  "name": "user creates new payee using following information",
   "rows": [
     {
       "cells": [
-        "Date",
-        "Description",
-        "Deposit",
-        "Withdrawal"
+        "Payee Name",
+        "The Law Offices of Hyde, Price \u0026 Scharks"
+      ]
+    },
+    {
+      "cells": [
+        "Payee Address",
+        "100 Same st, Anytown, USA, 10001"
+      ]
+    },
+    {
+      "cells": [
+        "Account",
+        "Checking"
+      ]
+    },
+    {
+      "cells": [
+        "Payee details",
+        "XYZ account"
       ]
     }
   ],
-  "keyword": "Then "
+  "keyword": "When "
 });
 formatter.match({
-  "location": "AccountActivityPageStepDefinitions.transactionTableColumnsShouldBeFollowingItems(String\u003e)"
+  "location": "AddNewPayeePageStepDefinitions.user_creates_new_payee_using_following_information(String,String\u003e)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "close browser",
-  "keyword": "And "
+  "name": "message \"The new payee The Law Offices of Hyde, Price \u0026 Scharks was successfully created.\" should be displayed",
+  "keyword": "Then "
 });
 formatter.match({
-  "location": "LoginPageStepDefinitions.closeBrowser()"
+  "location": "AddNewPayeePageStepDefinitions.message_should_be_displayed(String)"
 });
 formatter.result({
   "status": "passed"
