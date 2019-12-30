@@ -1,121 +1,97 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "start_timestamp": "2019-12-25T03:14:10.905Z",
-        "line": 3,
-        "name": "Search date range",
+        "start_timestamp": "2019-12-30T19:13:13.522Z",
+        "line": 4,
+        "name": "Add a new payee",
         "description": "",
-        "id": "find-transactions-in-account-activity;search-date-range",
+        "id": "add-new-payee-under-pay-bills;add-a-new-payee",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 2604282183,
+              "duration": 3599853867,
               "status": "passed"
             },
-            "line": 4,
-            "name": "user is already on Find Transactions tab",
+            "line": 5,
+            "name": "user is already on Add New Payee page",
             "match": {
-              "location": "FindTransactionsPageStepDefinitions.user_is_already_on_Find_Transactions_tab()"
+              "location": "AddNewPayeePageStepDefinitions.userIsAlreadyOnAddNewPayeePage()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 450899948,
+              "duration": 1304322798,
               "status": "passed"
             },
-            "line": 5,
-            "name": "user enters date range from \"2012-09-01\" to \"2012-09-06\" and clicks find button",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"2012-09-01\"",
-                  "offset": 28
-                },
-                {
-                  "val": "\"2012-09-06\"",
-                  "offset": 44
-                }
-              ],
-              "location": "FindTransactionsPageStepDefinitions.user_enters_date_range_from_to_and_clicks_find_button(String,String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
             "line": 6,
-            "name": "results table should only show transactions between “2012-09-01” and \"2012-09-06\"",
-            "match": {},
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 7,
-            "name": "results should be sorted by most recent date",
-            "match": {},
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 627676,
-              "status": "skipped"
-            },
-            "line": 8,
-            "name": "user enters date range from \"2012-09-02\" to \"2012-09-06\" and clicks find button",
+            "name": "user creates new payee using following information",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"2012-09-02\"",
-                  "offset": 28
-                },
-                {
-                  "val": "\"2012-09-06\"",
-                  "offset": 44
-                }
-              ],
-              "location": "FindTransactionsPageStepDefinitions.user_enters_date_range_from_to_and_clicks_find_button(String,String)"
+              "location": "AddNewPayeePageStepDefinitions.user_creates_new_payee_using_following_information(String,String\u003e)"
             },
+            "rows": [
+              {
+                "cells": [
+                  "Payee Name",
+                  "The Law Offices of Hyde, Price \u0026 Scharks"
+                ]
+              },
+              {
+                "cells": [
+                  "Payee Address",
+                  "100 Same st, Anytown, USA, 10001"
+                ]
+              },
+              {
+                "cells": [
+                  "Account",
+                  "Checking"
+                ]
+              },
+              {
+                "cells": [
+                  "Payee details",
+                  "XYZ account"
+                ]
+              }
+            ],
             "keyword": "When "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 69258429,
+              "status": "passed"
             },
-            "line": 9,
-            "name": "results table should only show transactions between \"2012-09-02\" and \"2012-09-06\"",
-            "match": {},
+            "line": 11,
+            "name": "message \"The new payee The Law Offices of Hyde, Price \u0026 Scharks was successfully created.\" should be displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"The new payee The Law Offices of Hyde, Price \u0026 Scharks was successfully created.\"",
+                  "offset": 8
+                }
+              ],
+              "location": "AddNewPayeePageStepDefinitions.message_should_be_displayed(String)"
+            },
             "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 10,
-            "name": "results table should not contain transactions dated \"2012-09-01\"",
-            "match": {},
-            "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@findTransactions"
+            "name": "@addNewPayee"
           }
         ]
       }
     ],
-    "name": "Find Transactions in Account Activity",
+    "name": "Add new payee under pay bills",
     "description": "",
-    "id": "find-transactions-in-account-activity",
+    "id": "add-new-payee-under-pay-bills",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/FindTransactions.feature",
+    "uri": "file:src/test/resources/features/AddNewPayee.feature",
     "tags": []
   }
 ]

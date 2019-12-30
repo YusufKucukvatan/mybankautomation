@@ -53,16 +53,18 @@ public class FindTransactionsPage  extends PageBase{
         findTransactionsTab.click();
     }
     public void findTransactions(String date1, String date2){
-        fromDate.sendKeys(date1);
-        toDate.sendKeys(date2);
-        findButton.click();
+            fromDate.sendKeys(date1);
+            toDate.sendKeys(date2);
+            findButton.click();
     }
     public boolean verifyTransactionDates() throws ParseException {
         boolean flag=true;
         int rowNum= dates.size();
         List<String> transactionDates=new ArrayList<>();
+
         SimpleDateFormat date=new SimpleDateFormat("yyyy-MM-dd");
         List<Date> d=new ArrayList<>();
+
         for (int i=0; i<rowNum; i++){
             transactionDates.add(Driver.get().findElement(By.xpath("//div[contains(@id,'filtered')]/table/tbody/tr["+(i+1)+"]/td[1]")).getText());
             d.add(date.parse(transactionDates.get(i)));
@@ -88,7 +90,5 @@ public class FindTransactionsPage  extends PageBase{
             }
         }
         return flag;
-
     }
-
 }

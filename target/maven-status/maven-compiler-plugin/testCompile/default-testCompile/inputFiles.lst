@@ -1,0 +1,16 @@
+/Users/yusufkucukvatan/Desktop/zerobankautomation/src/test/java/com/zerobank/utilities/Driver.java
+/Users/yusufkucukvatan/Desktop/zerobankautomation/src/test/java/com/zerobank/pages/AccountActivityPage.java
+/Users/yusufkucukvatan/Desktop/zerobankautomation/src/test/java/com/zerobank/pages/PageBase.java
+/Users/yusufkucukvatan/Desktop/zerobankautomation/src/test/java/com/zerobank/step_definitions/AccountSummaryPageStepDefinitions.java
+/Users/yusufkucukvatan/Desktop/zerobankautomation/src/test/java/com/zerobank/pages/AccountSummaryPage.java
+/Users/yusufkucukvatan/Desktop/zerobankautomation/src/test/java/com/zerobank/utilities/ConfigurationReader.java
+/Users/yusufkucukvatan/Desktop/zerobankautomation/src/test/java/com/zerobank/runners/CukesRunner.java
+/Users/yusufkucukvatan/Desktop/zerobankautomation/src/test/java/com/zerobank/utilities/BrowserUtils.java
+/Users/yusufkucukvatan/Desktop/zerobankautomation/src/test/java/com/zerobank/step_definitions/Hooks.java
+/Users/yusufkucukvatan/Desktop/zerobankautomation/src/test/java/com/zerobank/step_definitions/LoginPageStepDefinitions.java
+/Users/yusufkucukvatan/Desktop/zerobankautomation/src/test/java/com/zerobank/pages/LoginPage.java
+/Users/yusufkucukvatan/Desktop/zerobankautomation/src/test/java/com/zerobank/pages/FindTransactionsPage.java
+/Users/yusufkucukvatan/Desktop/zerobankautomation/src/test/java/com/zerobank/step_definitions/AddNewPayeePageStepDefinitions.java
+/Users/yusufkucukvatan/Desktop/zerobankautomation/src/test/java/com/zerobank/pages/AddNewPayeePage.java
+/Users/yusufkucukvatan/Desktop/zerobankautomation/src/test/java/com/zerobank/step_definitions/FindTransactionsPageStepDefinitions.java
+/Users/yusufkucukvatan/Desktop/zerobankautomation/src/test/java/com/zerobank/step_definitions/AccountActivityPageStepDefinitions.java

@@ -12,8 +12,7 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "html:target/default-cucumber-reports", "json:target/cucumber.json"},
         monochrome = true,
         dryRun = false,
-        tags = "@findTransactions"
+        tags = "@addNewPayee"
 )
-
 public class CukesRunner {
 }
