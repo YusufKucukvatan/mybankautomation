@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions (
         features = {"src/test/resources/features"},
         glue = {"/com/zerobank/step_definitions"},
-        plugin = {"pretty", "html:target/default-cucumber-reports", "json:target/cucumber.json"},
+        plugin = {"pretty", "html:target/default-cucumber-reports", "json:target/cucumber.json", "rerun:target/rerun.txt"},
         monochrome = true,
         dryRun = false,
         tags = "@addNewPayee"

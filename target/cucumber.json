@@ -3,7 +3,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2019-12-30T19:13:13.522Z",
+        "start_timestamp": "2019-12-30T23:51:10.953Z",
         "line": 4,
         "name": "Add a new payee",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3599853867,
+              "duration": 2486066285,
               "status": "passed"
             },
             "line": 5,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 1304322798,
+              "duration": 535269545,
               "status": "passed"
             },
             "line": 6,
@@ -63,7 +63,7 @@
           },
           {
             "result": {
-              "duration": 69258429,
+              "duration": 67628212,
               "status": "passed"
             },
             "line": 11,
